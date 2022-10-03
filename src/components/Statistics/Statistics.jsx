@@ -1,4 +1,5 @@
 import React from 'react';
+import css from '../styles.module.css';
 
 export const Statistics = ({
   good,
@@ -8,12 +9,14 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return (
-    <ul>
-      <li>Good: {good}</li>
-      <li>Neutral: {neutral}</li>
-      <li>Bad: {bad}</li>
-      <li>Total: {total}</li>
-      <li>Positive feedback: {positivePercentage}%</li>
+    <ul className={css.feedback__list}>
+      <li className={css.feedback__item}>Good: {good}</li>
+      <li className={css.feedback__item}>Neutral: {neutral}</li>
+      <li className={css.feedback__item}>Bad: {bad}</li>
+      <li className={css.feedback__item}>Total: {total}</li>
+      <li className={css.feedback__item}>
+        Positive feedback: {positivePercentage}%
+      </li>
     </ul>
   );
 };
